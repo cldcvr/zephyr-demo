@@ -1,5 +1,5 @@
 environments:
-  - name: Dev
+  - name: Development
     provisioner: gcp
     iacPolicy: "CC Best Practice"
     iacRoot: "terraform"
@@ -11,7 +11,7 @@ pipelines:
 
 applications:
   zpdemo:
-    displayName: "Zephyr Demp"
+    displayName: "Zephyr Demo"
     srcRoot: "."
     pipeline: zephyr-demo-deploy
 
@@ -20,7 +20,7 @@ deployments:
     endpoints:
       - zpdemo
     environment:
-      name: Dev
+      name: Development
     applications:
       zpdemo:
         env:
